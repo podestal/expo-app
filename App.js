@@ -1,27 +1,14 @@
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import products from './assets/data/products';
+import { StyleSheet, View, ScrollView} from 'react-native';
 import Products from './src/components/Products';
 
 export default function App() {
 
-  const product = products[0]
-
   return (
-    <View style={styles.container}>
-      <Products />
-      {/* <Image source={{uri: products[0].image}} style={styles.image}/>
-      <Text style={styles.title}>{products[0].name}</Text>
-      <Text style={styles.sub_title}>The best peperoni pizza that you ever will try</Text>
-      <Text style={styles.price}>{products[0].price}</Text>
-      <Image source={{uri: products[1].image}} style={styles.image}/>
-      <Text style={styles.title}>{products[1].name}</Text>
-      <Text style={styles.sub_title}>The best peperoni pizza that you ever will try</Text>
-      <Text style={styles.price}>{products[1].price}</Text>
-      <Button 
-          style={styles.button}
-          title="Learn More"
-      /> */}
-    </View>
+    <ScrollView style={styles.scrollView}>
+      <View style={styles.container}>
+        <Products />
+      </View>
+    </ScrollView>
   );
 }
 
@@ -51,5 +38,8 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#000',
     fontSize: 20
+  },
+  scrollView: {
+    marginHorizontal: 20,
   },
 });

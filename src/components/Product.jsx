@@ -1,11 +1,11 @@
 import React from 'react'
-import { Text, Image, StyleSheet, View } from 'react-native'
+import { Text, Image, StyleSheet, View, ScrollView } from 'react-native'
 
 const Product = ({ product }) => {
   return (
     <>
-        <Image source={{uri: product.image}} style={styles.image}/>
         <Text style={styles.title}>{product.name}</Text>
+        <Image source={{uri: product.image}} style={styles.image}/>
         <Text style={styles.title}>{product.price}</Text>
     </>
   )
@@ -21,12 +21,6 @@ const styles = StyleSheet.create({
       width: 100,
       height: 100,
     },
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
     title: {
       fontSize:20,
       fontWeight:'bold',
@@ -38,10 +32,6 @@ const styles = StyleSheet.create({
     price: {
       margin: 10,
       fontSize: 12,
-    },
-    button: {
-      backgroundColor: '#000',
-      fontSize: 20
     },
   });
 
